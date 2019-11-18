@@ -1,0 +1,29 @@
+name: "CF CLI"
+description: "Deploy and manage Cloud Foundry using the cf cli"
+branding:
+  icon: "upload-cloud"
+  color: "blue"
+inputs:
+  cf_api:
+    description: "Target API Endpoint of Cloud Foundry"
+    required: true
+  cf_username:
+    description: "Username for API authentication"
+    required: true
+  cf_password:
+    description: "Password for API authentication"
+    required: true
+  cf_org:
+    description: "Target Organization"
+    required: false
+  cf_space:
+    description: "Target Space"
+    required: false
+  command:
+    description: "Command to run using CF CLI"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.command }}
