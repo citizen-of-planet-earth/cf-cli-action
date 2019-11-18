@@ -1,4 +1,4 @@
-name: "CF CLI"
+name: "CF CLI Action"
 description: "Deploy and manage Cloud Foundry using the cf cli"
 branding:
   icon: "upload-cloud"
