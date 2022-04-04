@@ -7,5 +7,8 @@ RUN echo "deb [trusted=yes] https://packages.cloudfoundry.org/debian stable main
 RUN apt-get update
 RUN apt-get install -y cf7-cli
 
+# Add support for MTA deployment
+RUN cf install-plugin multiapps -f
+
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
