@@ -1,5 +1,5 @@
-name: "CF CLI Action"
-description: "Deploy and manage Cloud Foundry using the cf cli"
+name: "SAP BTP Action"
+description: "Deploy and manage SAP BTP Cloud Foundry using the cf cli"
 branding:
   icon: "upload-cloud"
   color: "blue"
