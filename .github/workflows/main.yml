@@ -9,7 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-18.04
     steps:
-    - uses: citizen-of-planet-earth/cf-cli-action@master
+    - uses: NickChecan/sap-btp-action@master
       with:
         cf_api: ${{ secrets.CF_API }}
         cf_username: ${{ secrets.CF_USER }}
