@@ -1,5 +1,5 @@
-# CF CLI Action
-Deploy to Cloud Foundry and manage your apps and services using the CF CLI easily with this GitHub Action.
+# SAP BTP Action
+Deploy to SAP BTP Cloud Foundry and manage your apps and services using the CF CLI easily with this GitHub Action.
 
 ## Example Workflow
 ```
@@ -20,12 +20,12 @@ jobs:
     needs: build
     
     steps:
-    - uses: citizen-of-planet-earth/cf-cli-action@master
+    - uses: NickChecan/sap-btp-action
       with:
         cf_api: https://api.my-cloud-foundry.com
         cf_username: ${{ secrets.CF_USER }}
         cf_password: ${{ secrets.CF_PASSWORD }}
         cf_org: AwesomeApp
         cf_space: Development
-        command: push -f manifest-dev.yml
+        command: deploy ./project.mtar -f
 ```
